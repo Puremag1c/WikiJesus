@@ -18,7 +18,7 @@ defmodule WikijesusWeb.LiveForm do
       <br>
       <form class="w-full max-w-sm" phx-submit="submit_form" phx-change="change_form">
         <div class="flex items-center border-b border-teal-500 py-2">
-          <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="https://en.wikipedia.org/" aria-label="Full name" name="link" phx-debounce="300" value={@form} phx-trigger-submit="key-up">
+          <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="https://en.wikipedia.org/" name="link" phx-debounce="300" value={@form} phx-trigger-submit="key-up">
           <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
             GO
           </button>
