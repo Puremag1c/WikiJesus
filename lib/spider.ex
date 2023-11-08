@@ -47,6 +47,6 @@ defmodule WikiSpider do
     |> Floki.find(tag)
     |> Floki.attribute("href")
     |> Enum.filter(fn x -> String.starts_with?(x, ["/wiki/"]) end)
-    |> Enum.map(fn x -> base_url()<>x end)
+    |> Enum.map(fn x -> "https://en.wikipedia.org"<>x end)
   end
 end

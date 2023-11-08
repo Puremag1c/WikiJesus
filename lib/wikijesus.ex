@@ -23,8 +23,10 @@ defmodule Wikijesus do
   end
 
   # Function, that click on random links from item and search for adequate link for next iteration
-  defp crazyRandomMachine(item, path) do
+  def crazyRandomMachine(item, path) do
+
     newitem =  WikiSpider.run(Enum.random(item.links))
+
     cond do
       length(newitem.links) == 0 -> crazyRandomMachine(item, path)
       String.trim(newitem.url, "https://en.wikipedia.org") == newitem.url -> crazyRandomMachine(item, path)
